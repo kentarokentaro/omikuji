@@ -13,6 +13,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var fortuneLabel: UILabel!
     
     @IBAction func getFortune(_ sender: Any) {
+
+        //おみくじ（乱数を発生させる）
+        let random = arc4random_uniform(10)
+        self.fortuneLabel.text = String(random)
     }
     
     override func viewDidLoad() {
