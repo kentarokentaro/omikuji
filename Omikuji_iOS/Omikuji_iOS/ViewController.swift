@@ -15,8 +15,9 @@ class ViewController: UIViewController {
     @IBAction func getFortune(_ sender: Any) {
 
         //おみくじ（乱数を発生させる）
-        let random = arc4random_uniform(10)
-        self.fortuneLabel.text = String(random)
+        let resutls = ["大吉","中吉","小吉","吉","末吉","凶","大凶"]
+        let random = arc4random_uniform(UInt32(resutls.count))
+        self.fortuneLabel.text = resutls[Int(random)]
     }
     
     override func viewDidLoad() {
